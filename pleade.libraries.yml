@@ -1,0 +1,9 @@
+pleade:
+  version: 1.x
+  js:
+    js/pleade.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.cookie
+    - core/drupal

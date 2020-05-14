@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Add attachments (typically assets) to a page before it is rendered.
+ *
+ * Use this hook when you want to conditionally add attachments to a page.
+ *
+ * If you want to alter the attachments added by other modules or if your module
+ * depends on the elements of other modules, use hook_page_attachments_alter()
+ * instead, which runs after this hook.
+ *
+ * If you try to add anything but #attached and #cache to the array, an
+ * exception is thrown.
+ *
+ * @param array &$attachments
+ *   An array that you can add attachments to.
+ *
+ * @see hook_page_attachments_alter()
+ */
+function pleade_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'pleade/pleade';
+}
+
+function pleade_theme() {
+    return [
+        'pleade_search_form' => [
+            'render element' => 'form',
+        ],
+        'pleade_saved_formatter' => [
+            'variables' => [
+                'saved_id' => NULL,
+                'drupal_title' => NULL,
+                'items_number' => NULL,
+                'markups' => NULL,
+            ],
+            'template' => 'pleade-saved-formatter',
+        ],
+        'pleade_embed_formatter' => [
+            'variables' => [
+                'pleade_relative_url' => NULL,
+                'drupal_title' => NULL,
+                'markups' => NULL,
+            ],
+            'template' => 'pleade-embed-formatter',
+        ],
+    ];
+}

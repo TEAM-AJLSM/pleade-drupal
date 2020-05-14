@@ -1,0 +1,12 @@
+pleade.wrap:
+  path: '/archives-en-ligne/{node}'
+  defaults:
+    _controller: '\Drupal\pleade\Controller\PleadeController::pleadeWrap'
+  requirements:
+    _access: 'TRUE'
+pleade_mets.wrap:
+  path: '/archives-en-ligne/mets/{node}'
+  defaults:
+    _controller: '\Drupal\pleade\Controller\PleadeController::pleadeMetsWrap'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,13 @@
+name: Pleade Module
+description: Integration of a Pleade application. For more inforamtions, visit http://pleade.com.
+package: Custom
+project: pleade
+'interface translation project': pleade
+'interface translation server pattern': http://pleade.com/translations/drupal/8.x/pleade-8.x.%language.po
+dependencies:
+  - search
+  - block
+type: module
+core: 8.x
+libraries:
+  - pleade/pleade

@@ -1,0 +1,5 @@
+services:
+  pleade.route_subscriber:
+    class: Drupal\pleade\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
