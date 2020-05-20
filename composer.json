@@ -1,7 +1,7 @@
 {
     "name": "pleade/drupal-pleade",
     "description": "Module personnalisé pour intégrer l'application 'Pleade'. Pour plus d'informations, aller sur http://pleade.com.",
-    "type": "drupal-custom-module",
+    "type": "drupal-module",
     "authors": [
         {
             "name": "TRSB",
